@@ -1,0 +1,12 @@
+{
+  "identifier": 0,
+  "name": "test name",
+  "type": "test type",
+  "openedDate": "0001-01-01T00:00:00",
+  "currency": "some currency",
+  "idAndAccountCode": "123|ABCCode",
+  "myAccount": true,
+  "accountType": 1,
+  "dateCreated": "0001-01-01T00:00:00",
+  "dollarType": "CD"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "test name 2",
+  "type": "test type 2",
+  "currency": "some currency 2",
+  "custodianCode": "abcxyz",
+  "myAccount": true,
+  "accountType": 2,
+  "dollarType": "U"
+}

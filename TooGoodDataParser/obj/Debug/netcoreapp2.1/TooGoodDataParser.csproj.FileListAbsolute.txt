@@ -1,0 +1,11 @@
+C:\Users\pvo\Documents\Visual Studio 2019\Project\TooGoodDataParser\TooGoodDataParser\bin\Debug\netcoreapp2.1\TooGoodDataParser.deps.json
+C:\Users\pvo\Documents\Visual Studio 2019\Project\TooGoodDataParser\TooGoodDataParser\bin\Debug\netcoreapp2.1\TooGoodDataParser.runtimeconfig.json
+C:\Users\pvo\Documents\Visual Studio 2019\Project\TooGoodDataParser\TooGoodDataParser\bin\Debug\netcoreapp2.1\TooGoodDataParser.runtimeconfig.dev.json
+C:\Users\pvo\Documents\Visual Studio 2019\Project\TooGoodDataParser\TooGoodDataParser\bin\Debug\netcoreapp2.1\TooGoodDataParser.dll
+C:\Users\pvo\Documents\Visual Studio 2019\Project\TooGoodDataParser\TooGoodDataParser\obj\Debug\netcoreapp2.1\TooGoodDataParser.csprojAssemblyReference.cache
+C:\Users\pvo\Documents\Visual Studio 2019\Project\TooGoodDataParser\TooGoodDataParser\obj\Debug\netcoreapp2.1\TooGoodDataParser.csproj.CoreCompileInputs.cache
+C:\Users\pvo\Documents\Visual Studio 2019\Project\TooGoodDataParser\TooGoodDataParser\obj\Debug\netcoreapp2.1\TooGoodDataParser.AssemblyInfoInputs.cache
+C:\Users\pvo\Documents\Visual Studio 2019\Project\TooGoodDataParser\TooGoodDataParser\obj\Debug\netcoreapp2.1\TooGoodDataParser.AssemblyInfo.cs
+C:\Users\pvo\Documents\Visual Studio 2019\Project\TooGoodDataParser\TooGoodDataParser\bin\Debug\netcoreapp2.1\TooGoodDataParser.pdb
+C:\Users\pvo\Documents\Visual Studio 2019\Project\TooGoodDataParser\TooGoodDataParser\obj\Debug\netcoreapp2.1\TooGoodDataParser.dll
+C:\Users\pvo\Documents\Visual Studio 2019\Project\TooGoodDataParser\TooGoodDataParser\obj\Debug\netcoreapp2.1\TooGoodDataParser.pdb
