@@ -12,7 +12,8 @@ namespace TooGoodDataParser.NUnitTest
         [Test]
         public void FormatOneJsonBuildTest()
         {
-            var formatOne = JsonLoader<FormatOne>.buildFromJson();
+            var intputs = JsonLoader<FormatOne>.buildFromJson();
+            var formatOne = intputs[0];
             Assert.IsNotNull(formatOne);
 
             Assert.AreEqual(0, formatOne.Identifier);
@@ -30,7 +31,8 @@ namespace TooGoodDataParser.NUnitTest
         [Test]
         public void FormatTwoJsonBuildTest()
         {
-            var formatTwo = JsonLoader<FormatTwo>.buildFromJson();
+            var inputs = JsonLoader<FormatTwo>.buildFromJson();
+            var formatTwo = inputs[0];
             Assert.IsNotNull(formatTwo);
 
             Assert.AreEqual("test name 2", formatTwo.Name);

@@ -8,7 +8,7 @@ namespace TooGoodDataParser.Utilities
     public static class JsonLoader<T>
     {
 
-        public static T buildFromJson()
+        public static List<T> buildFromJson()
         {
             var className = typeof(T).Name;
             var root = Directory.GetCurrentDirectory();
@@ -16,7 +16,7 @@ namespace TooGoodDataParser.Utilities
             using (StreamReader r = new StreamReader(filePath))
             {
                 string json = r.ReadToEnd();
-                return JsonConvert.DeserializeObject<T>(json);
+                return JsonConvert.DeserializeObject<List<T>>(json);
             }
         }
     }

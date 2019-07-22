@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using TooGoodDataParser.Models;
 using TooGoodDataParser.Utilities;
@@ -20,65 +22,79 @@ namespace TooGoodDataParser
             Console.ReadKey();
         }
 
-        public static OutputTarget CaseOne()
+        public static List<OutputTarget> CaseOne()
         {
             //For Case 1
             Console.WriteLine("For test case 1 \n");
-            var input = JsonLoader<FormatOne>.buildFromJson();
+            var inputs = JsonLoader<FormatOne>.buildFromJson();
 
-            var dollarType = input.DollarType.GetCurrency();
+            List<OutputTarget> outputs = new List<OutputTarget>();
 
-            string[] numericIdAndAccountCode = input.IdAndAccountCode.Split('|');
+            foreach (var input in inputs)
+            {
+                var dollarType = input.DollarType.GetCurrency();
 
-            var accountType = input.AccountType.GetAccountType();
+                string[] numericIdAndAccountCode = input.IdAndAccountCode.Split('|');
 
-            var outputTarget = new OutputTarget();
+                var accountType = input.AccountType.GetAccountType();
 
-            PropertyCopier<FormatOne, OutputTarget>.Copy(input, outputTarget);
+                var outputTarget = new OutputTarget();
 
-            outputTarget.AccountType = accountType;
-            outputTarget.DollarType = dollarType;
-            outputTarget.AccountCode = numericIdAndAccountCode[1];
-            outputTarget.Code = numericIdAndAccountCode[0];
+                PropertyCopier<FormatOne, OutputTarget>.Copy(input, outputTarget);
 
-            var inputRaw = Newtonsoft.Json.JsonConvert.SerializeObject(input);
-            var output = Newtonsoft.Json.JsonConvert.SerializeObject(outputTarget);
+                outputTarget.AccountType = accountType;
+                outputTarget.DollarType = dollarType;
+                outputTarget.AccountCode = numericIdAndAccountCode[1];
+                outputTarget.Code = numericIdAndAccountCode[0];
 
-            Console.WriteLine("input = {0}", inputRaw);
-            Console.WriteLine();
-            Console.WriteLine("output = {0}", output);
+                var inputRaw = Newtonsoft.Json.JsonConvert.SerializeObject(input);
+                var output = Newtonsoft.Json.JsonConvert.SerializeObject(outputTarget);
 
-            return outputTarget;
+                Console.WriteLine("input = {0}", inputRaw);
+                Console.WriteLine();
+                Console.WriteLine("output = {0}", output);
+
+                outputs.Add(outputTarget);
+            }
+
+            return outputs;
         }
 
-        public static OutputTarget CaseTwo()
+        public static List<OutputTarget> CaseTwo()
         {
             // For Case 2
             Console.WriteLine("//////////////////////////\n");
             Console.WriteLine("For test case 2 \n");
 
-            var input2 = JsonLoader<FormatTwo>.buildFromJson();
+            var inputs = JsonLoader<FormatTwo>.buildFromJson();
 
-            var dollarType2 = input2.DollarType.GetCurrency();
+            List<OutputTarget> outputs = new List<OutputTarget>();
 
-            var accountType2 = input2.AccountType.GetAccountType();
+            foreach (var input2 in inputs)
+            {
+                var dollarType2 = input2.DollarType.GetCurrency();
 
-            var outputTarget2 = new OutputTarget();
+                var accountType2 = input2.AccountType.GetAccountType();
 
-            PropertyCopier<FormatTwo, OutputTarget>.Copy(input2, outputTarget2);
+                var outputTarget2 = new OutputTarget();
 
-            outputTarget2.AccountType = accountType2;
-            outputTarget2.DollarType = dollarType2;
-            outputTarget2.AccountCode = input2.CustodianCode;
+                PropertyCopier<FormatTwo, OutputTarget>.Copy(input2, outputTarget2);
 
-            var inputRaw2 = Newtonsoft.Json.JsonConvert.SerializeObject(input2);
-            var output2 = Newtonsoft.Json.JsonConvert.SerializeObject(outputTarget2);
+                outputTarget2.AccountType = accountType2;
+                outputTarget2.DollarType = dollarType2;
+                outputTarget2.AccountCode = input2.CustodianCode;
 
-            Console.WriteLine("input = {0}", inputRaw2);
-            Console.WriteLine();
-            Console.WriteLine("output = {0}", output2);
+                var inputRaw2 = Newtonsoft.Json.JsonConvert.SerializeObject(input2);
+                var output2 = Newtonsoft.Json.JsonConvert.SerializeObject(outputTarget2);
 
-            return outputTarget2;
+                Console.WriteLine("input = {0}", inputRaw2);
+                Console.WriteLine();
+                Console.WriteLine("output = {0}", output2);
+
+                outputs.Add(outputTarget2);
+            }
+
+            return outputs;
         }
     }
 }

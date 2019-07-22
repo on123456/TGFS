@@ -17,7 +17,7 @@ namespace Tests
         [Test]
         public void CaseOneTest()
         {
-            var actual = Program.CaseOne();
+            var actual = Program.CaseOne()[0];
 
             Assert.AreEqual(Newtonsoft.Json.JsonConvert.SerializeObject(formatOneExpectedOutput),
                 Newtonsoft.Json.JsonConvert.SerializeObject(actual));
@@ -26,7 +26,7 @@ namespace Tests
         [Test]
         public void CaseTwoTest()
         {
-            var actual = Program.CaseTwo();
+            var actual = Program.CaseTwo()[0];
 
             Assert.AreEqual(Newtonsoft.Json.JsonConvert.SerializeObject(formatTwoExpectedOutput),
                 Newtonsoft.Json.JsonConvert.SerializeObject(actual));
